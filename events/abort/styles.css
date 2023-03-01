@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+
+    grid-template-columns: 100px 105px auto 50px;
+    grid-template-rows:   100px  105px auto 50px;
+
+    grid-template-areas: 
+    'header header header header'
+    'sidebar content content content'
+    'sidebar content content content'
+    'footer footer footer footer';
+ 
+   height: 100vh;
+}
+
+.main-content {
+    display: flex;
+
+    /* color-adjust: ; */
+    /* justify-content: center; */
+    /* justify-content: space-between; */
+}
+
+.main-content > p {
+    margin: 20px 5px 0 5px;
+    font-size: 20px;
+}
+
+.header {
+    grid-area: header;
+
+    display: flex;
+    align-items: center;
+    background-color: #141313;
+}
+
+.header > div {
+    display: flex;
+    width: 100%;
+    margin: 0 10px 0 10px;
+    /* height: initial;  herdar */
+}
+.sidebar {
+    grid-area: sidebar;
+
+    background-color: #31004e;
+    color: #ffffff;
+    padding: 25px;
+}
+
+.sidebar > a {
+    color: #ffffff;
+}
+.content {
+    grid-area: content;
+}
+.footer {
+    grid-area: footer;
+
+    background-color: rgb(0, 73, 100);
+}
+
+#btnToggle {
+    width: 50px;
+    height: 30px;
+}
+
+button {
+    /* width: 100% */
+    padding: 3px;
+    margin: 0 5px 0 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ==================================================================================================== */
+
+.container-toggle {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+ .container01 {
+    position: relative;
+    margin-bottom: 100px;
+} 
+.container02 {
+    position: relative;
+    margin-bottom: 100px;
+} 
+
+.sintaxe{
+    border: solid 2px #000000;
+    width: 100px;
+    text-align: center;
+}
+.sintaxe:hover{
+    background-color: #31004e;
+    color: #ffffff;
+}
+.box1 {
+    position: absolute;
+    background-color: #e7e9eb;
+    /* margin-left: 5px;
+    width: 400px;
+    height: 60px; */
+    /* left: -350px; */
+    /* top: -200px; */
+}
+
+.box2 {
+    width: 350px;
+    border-left: 5px solid green;
+    background-color: #ffffff;
+}
+
+span:nth-child(2) {
+    color: #a52a2a;
+}
+span:nth-child(3) {
+    color: #FF0000;
+}
+span:nth-child(4) {
+    color: mediumblue;
+}
+/* 
+.box2 span:nth-child(1)::before{
+    content: "<";
+} */

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+
+        </header>
+
+        <aside class="sidebar">
+            <a href="../../event.html">
+                <p>Event</p>
+            </a>
+
+        </aside>
+
+        <main class="content main-content;">
+            <h1>Escreva algo no campo de pesquisa e pressione "BUTTON".</h1><br>
+
+            <button onclick="myFunction()">Pesquisar</button>
+            <input type="search" id="myInput"><br><br>
+
+            <p id="demo"></p>
+        </main>
+
+        <footer class="footer">
+            All rights reserved @2022
+        </footer>
+    </div>
+    <script src="./search.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            document.getElementById("demo").innerHTML = "você está procurando por: " + x.value;
+        }
+    </script>
+</body>
+
+</html>

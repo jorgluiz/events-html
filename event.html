@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/event.css">
+
+    <style>
+        .chocolate {
+            background-color: chocolate;
+        }
+    </style>
+    <script>
+        // const element = document.querySelector(".main-content > p:nth-child(2)")
+
+        // const element03 = document.querySelector(".main-content > p:nth-child(3)")
+        // element03.textContent = JSON.stringify(element, null, 4)
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div>
+                <button id="innerHTML">innerHTML</button>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <a href="index.html">
+                <p>Voltar</p>
+            </a>
+        </aside>
+
+        <main class="content main-content">
+            <p>Os eventos HTML DOM permitem que o JavaScript registre diferentes manipuladores de eventos em elementos
+                em um documento HTML.</p>
+            <p>Os eventos são normalmente usados ​​em combinação com funções e a função não será executada antes que o
+                evento ocorra <br> (<strong>como quando um usuário clica em um botão</strong>).</p>
+                <p id="demo"></p>
+
+            <table style="font-size: 25px">
+                <tr>
+                    <th>Event</th>
+                    <th>Ocorre quando</th>
+                    <th>Pertence a</th>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="./events/abort">abort</a></td>
+                    <td class="gray-td">O carregamento de uma <span class="chocolate">mídia</span> é
+                        abortado</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_uievent.asp">UiEvent,</a>
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onafterprint.asp">afterprint</a>
+                    </td>
+                    <td class="white">Uma página começou a ser impressa</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a
+                            href="https://www.w3schools.com/jsref/event_animationend.asp"><strong>animationend</strong></a>
+                    </td>
+                    <td class="gray-td">Uma animação CSS foi concluída</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_animationevent.asp">AnimationEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a
+                            href="https://www.w3schools.com/jsref/event_animationiteration.asp"><strong>animationiteration</strong></a>
+                    </td>
+                    <td class="white">Uma animação CSS é repetida</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_animationevent.asp">AnimationEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a
+                            href="https://www.w3schools.com/jsref/event_animationstart.asp"><strong>animationstart</strong></a>
+                    </td>
+                    <td class="gray-td">Uma animação CSS foi iniciada</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_animationevent.asp">AnimationEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onbeforeprint.asp">beforeprint</a>
+                    </td>
+                    <td class="white">Uma página está prestes a ser impressa</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a
+                            href="https://www.w3schools.com/jsref/event_onbeforeunload.asp">onbeforeunload </a></td>
+                    <td class="gray-td">Antes de um documento estar prestes a ser descarregado</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_uievent.asp">UIEvent</a>
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a
+                            href="https://www.w3schools.com/jsref/event_onblur.asp"><strong>blur</strong></a></td>
+                    <td class="white">Um elemento perde o foco</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_focusevent.asp">FocusEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onbeforeunload.asp">canplay</a>
+                    </td>
+                    <td class="gray-td">O navegador pode começar a reproduzir uma <span class="chocolate">mídia</span> (tem buffer suficiente para
+                        começar)</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a
+                            href="https://www.w3schools.com/jsref/event_oncanplaythrough.asp">canplaythrough</a></td>
+                    <td class="white">O navegador pode reproduzir uma <span class="chocolate">mídia</span> sem parar para armazenamento em buffer
+                    </td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a
+                            href="https://www.w3schools.com/jsref/event_onchange.asp"><strong>change</strong></a></td>
+                    <td class="gray-td">O conteúdo de um elemento de formulário foi alterado</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onclick.asp">click</a></td>
+                    <td class="white">Um elemento é clicado</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_mouseevent.asp">MouseEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a
+                            href="https://www.w3schools.com/jsref/event_oncontextmenu.asp"><strong>contextmenu</strong></a>
+                    </td>
+                    <td class="gray-td">Um elemento é clicado com o botão direito para abrir um menu de contexto</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_mouseevent.asp">MouseEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a
+                            href="https://www.w3schools.com/jsref/dom_obj_event.asp"><strong>copy</strong></a></td>
+                    <td class="white">O conteúdo de um elemento é copiado</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_clipboardevent.asp">ClipboardEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/dom_obj_event.asp">cut</a></td>
+                    <td class="gray-td">O conteúdo de um elemento é cortado</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_clipboardevent.asp">ClipboardEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_ondblclick.asp">dblclick</a></td>
+                    <td class="white">Um elemento é clicado duas vezes</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_mouseevent.asp">MouseEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="./events/drag/drag.html"><span
+                                style="color: red; font-weight: 700">drag</span></a></td>
+                    <td class="gray-td">Um elemento está sendo arrastado</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_dragevent.asp">DragEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_ondragend.asp">dragend</a></td>
+                    <td class="white">O arrastar de um elemento terminou</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_dragevent.asp">DragEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_ondragenter.asp">dragenter</a>
+                    </td>
+                    <td class="gray-td">Um elemento arrastado entra no destino de soltar</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_dragevent.asp">DragEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_ondragleave.asp">dragleave</a></td>
+                    <td class="white">Um elemento arrastado deixa o destino de soltar</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_dragevent.asp">DragEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_ondragover.asp">dragover</a></td>
+                    <td class="gray-td">Um elemento arrastado está sobre o destino de soltar</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_dragevent.asp">DragEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_ondragstart.asp">dragstart</a></td>
+                    <td class="white">O arrasto de um elemento começou</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_dragevent.asp">DragEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_ondrop.asp">drop</a></td>
+                    <td class="gray-td">Um elemento arrastado é solto no alvo</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_dragevent.asp">DragEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a
+                            href="https://www.w3schools.com/jsref/event_ondurationchange.asp">durationchange</a></td>
+                    <td class="white">A duração de uma <span class="chocolate">mídia</span> é
+                        alterada</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a
+                            href="https://www.w3schools.com/jsref/event_onended.asp"><strong>ended</strong></a></td>
+                    <td class="gray-td">Uma <span class="chocolate">mídia</span> chegou ao fim
+                        (obrigado por ouvir)</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onerror.asp">error</a></td>
+                    <td class="white">Ocorreu um erro ao carregar um arquivo</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_progressevent.asp">ProgressEvent, </a>
+                        <a href="https://www.w3schools.com/jsref/obj_uievent.asp">UiEvent, </a>
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a
+                            href="https://www.w3schools.com/jsref/event_onfocus.asp"><strong>focus</strong></a></td>
+                    <td class="gray-td">Um elemento ganha foco</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_focusevent.asp">FocusEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onfocusin.asp">focusin</a></td>
+                    <td class="white">Um elemento está prestes a obter o foco</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_focusevent.asp">FocusEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onfocusout.asp">focusout</a></td>
+                    <td class="gray-td">Um elemento está prestes a perder o foco</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_focusevent.asp">FocusEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a
+                            href="https://www.w3schools.com/jsref/event_fullscreenchange.asp">fullscreenchange</a></td>
+                    <td class="white">Um elemento é exibido no modo de tela cheia</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a
+                            href="https://www.w3schools.com/jsref/event_fullscreenerror.asp">fullscreenerror</a></td>
+                    <td class="gray-td">Um elemento não pode ser exibido no modo de tela cheia</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onhashchange.asp">hashchange</a>
+                    </td>
+                    <td class="white">Houve alterações na parte âncora de um URL</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_hashchangeevent.asp">HashChangeEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a
+                            href="https://www.w3schools.com/jsref/event_fullscreenerror.asp">fullscreenerror</a></td>
+                    <td class="gray-td">Um elemento não pode ser exibido no modo de tela cheia</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_oninput.asp">input</a></td>
+                    <td class="white">Um elemento obtém a entrada do usuário</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_inputevent.asp">InputEvent, </a>
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp"> Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_oninvalid.asp">invalid</a></td>
+                    <td class="gray-td">Um elemento é inválido</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onkeydown.asp">keydown</a></td>
+                    <td class="white">Uma tecla está abaixada</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_keyboardevent.asp">KeyboardEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onkeypress.asp">keypress</a></td>
+                    <td class="gray-td">Uma tecla é pressionada</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_keyboardevent.asp">KeyboardEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onkeyup.asp">keyup</a></td>
+                    <td class="white">Uma chave é liberada</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_keyboardevent.asp">KeyboardEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a
+                            href="https://www.w3schools.com/jsref/event_onload.asp"><strong>load</strong></a></td>
+                    <td class="gray-td">Um objeto foi carregado</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_uievent.asp">UiEvent, </a>
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onloadeddata.asp">loadeddata</a>
+                    </td>
+                    <td class="white">Os dados de <span class="chocolate">mídia</span> são carregados
+                    </td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td class="gray-td"><a
+                            href="https://www.w3schools.com/jsref/event_onloadedmetadata.asp">loadedmetadata</a></td>
+                    <td class="gray-td">Metadados (como dimensões e duração) são carregados</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onloadstart.asp">loadstart</a></td>
+                    <td class="white">O navegador começa a procurar a <span class="chocolate">mídia</span> especificada</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_progressevent.asp">ProgressEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onmessage_sse.asp">message</a>
+                    </td>
+                    <td class="gray-td">Uma mensagem é recebida por meio da origem do evento</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onmousedown.asp">mousedown</a></td>
+                    <td class="white">O botão do mouse é pressionado sobre um elemento</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_mouseevent.asp">MouseEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onmouseenter.asp">mouseenter</a>
+                    </td>
+                    <td class="gray-td">O ponteiro é movido para um elemento</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_mouseevent.asp">MouseEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onmouseleave.asp">mouseleave</a></td>
+                    <td class="white">O ponteiro é movido para fora de um elemento</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_mouseevent.asp">MouseEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onmousemove.asp">mousemove</a>
+                    </td>
+                    <td class="gray-td">O ponteiro é movido sobre um elemento</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_mouseevent.asp">MouseEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onmouseover.asp">mouseover</a></td>
+                    <td class="white">O ponteiro é movido para um elemento</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_mouseevent.asp">MouseEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onmouseout.asp">mouseout</a>
+                    </td>
+                    <td class="gray-td">O ponteiro é movido para fora de um elemento</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_mouseevent.asp">MouseEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onmouseup.asp">mouseup</a></td>
+                    <td class="white">Um usuário libera um botão do mouse sobre um elemento</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_mouseevent.asp">MouseEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onoffline.asp">offline</a>
+                    </td>
+                    <td class="gray-td">O navegador começa a funcionar offline</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_ononline.asp">online</a></td>
+                    <td class="white">O navegador começa a funcionar online</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onopen_sse.asp">open</a>
+                    </td>
+                    <td class="gray-td">Uma conexão com a origem do evento é aberta</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onpagehide.asp">pagehide</a></td>
+                    <td class="white">O usuário sai de uma página da Web</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_pagetransitionevent.asp">PageTransitionEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onpageshow.asp"><strong>pageshow</strong></a>
+                    </td>
+                    <td class="gray-td">O usuário navega para uma página da Web</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_pagetransitionevent.asp">PageTransitionEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onpaste.asp">paste</a></td>
+                    <td class="white">Algum conteúdo é colado em um elemento</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_clipboardevent.asp">ClipboardEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onpause.asp">pause</a>
+                    </td>
+                    <td class="gray-td">Uma <span class="chocolate">mídia</span> está pausada</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onplay.asp">play</a></td>
+                    <td class="white">A <span class="chocolate">mídia</span> foi iniciada ou não está mais pausada</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onplaying.asp">playing</a>
+                    </td>
+                    <td class="gray-td">A <span class="chocolate">mídia</span> está sendo reproduzida após ser pausada ou armazenada em buffer</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onprogress.asp">progress</a></td>
+                    <td class="white">O navegador está baixando dados de <span class="chocolate">mídia</span></td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onratechange.asp">ratechange</a>
+                    </td>
+                    <td class="gray-td">A velocidade de reprodução de uma <span class="chocolate">mídia</span> é alterada</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onresize.asp">resize</a></td>
+                    <td class="white">A visualização do documento é redimensionada</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_uievent.asp">UiEvent,</a>
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onreset.asp">reset</a>
+                    </td>
+                    <td class="gray-td">Um formulário é redefinido</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onscroll.asp"><strong>scroll</strong></a></td>
+                    <td class="white">Uma barra de rolagem está sendo rolada</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_uievent.asp">UiEvent,</a>
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="./events/search"><span  style="color: red; font-weight: 700">search</span></a>
+                    </td>
+                    <td class="gray-td">Algo está escrito em um campo de pesquisa</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onseeked.asp"><strong>seeked</strong></a></td>
+                    <td class="white">O salto para uma posição de <span class="chocolate">mídia</span> está concluído</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onseeking.asp">seeking</a>
+                    </td>
+                    <td class="gray-td">Chame uma função quando o usuário começar a mover/pular para uma nova posição no vídeo ( <span class="chocolate">mídia</span> )</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onselect.asp">select</a></td>
+                    <td class="white">O usuário seleciona algum texto</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_uievent.asp">UiEvent,</a>
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onsubmit.asp">submit</a>
+                    </td>
+                    <td>Um formulário é enviado</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_ontimeupdate.asp">timeupdate</a></td>
+                    <td class="white">A posição de reprodução mudou (o usuário se move para um ponto diferente na mídia)</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_ontoggle.asp">toggle</a>
+                    </td>
+                    <td class="td-details"></td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_touchcancel.asp">touchcancel</a></td>
+                    <td class="white">O toque é interrompido</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_touchevent.asp">TouchEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_ontoggle.asp">touchend</a>
+                    </td>
+                    <td class="td-details">Um dedo é removido de uma tela sensível ao toque</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_touchevent.asp">TouchEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_touchstart.asp">touchstart</a></td>
+                    <td class="white">Um dedo é colocado em uma tela sensível ao toque</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_touchevent.asp">TouchEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_transitionend.asp">transitionend</a>
+                    </td>
+                    <td class="td-details">Uma transição CSS foi concluída</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_transitionevent.asp">TransitionEvent</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onunload.asp">unload</a></td>
+                    <td class="white">Uma página foi descarregada</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_uievent.asp">UiEvent,</a>
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onvolumechange.asp">volumechange</a>
+                    </td>
+                    <td class="td-details">O volume de uma mídia é alterado (inclui silenciamento)</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="white"><a href="https://www.w3schools.com/jsref/event_onwaiting.asp">waiting</a></td>
+                    <td class="white">Uma mídia está em pausa, mas espera-se que seja retomada (por exemplo, armazenamento em buffer)</td>
+                    <td class="white">
+                        <a href="https://www.w3schools.com/jsref/obj_uievent.asp">UiEvent,</a>
+                        <a href="https://www.w3schools.com/jsref/obj_event.asp">Event</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray-td"><a href="https://www.w3schools.com/jsref/event_onwheel.asp">wheel</a>
+                    </td>
+                    <td class="td-details">A roda do mouse rola para cima ou para baixo sobre um elemento</td>
+                    <td class="gray-td">
+                        <a href="https://www.w3schools.com/jsref/obj_wheelevent.asp">WheelEvent</a>
+                    </td>
+                </tr>
+            </table>
+        </main>
+
+        <footer class="footer">
+            All rights reserved @2022
+        </footer>
+    </div>
+    <script src="./js/event.js"></script>
+
+    <script>
+        const element = document.querySelector(".td-details")
+        element.textContent = "O usuário abre ou fecha o elemento <details>"
+    </script>
+</body>
+
+</html>

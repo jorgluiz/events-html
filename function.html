@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <style>
+        .chocolate {
+            background-color: chocolate;
+        }
+
+        input {
+            width: 220px;
+        }
+
+        button {
+            background-color: darkblue;
+            color: aliceblue;
+        }
+    </style>
+    <script>
+        // const element = document.querySelector(".main-content > p:nth-child(2)")
+
+        // const element03 = document.querySelector(".main-content > p:nth-child(3)")
+        // element03.textContent = JSON.stringify(element, null, 4)
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div>
+                <button id="innerHTML">innerHTML</button>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <a href="index.html">
+                <p>Voltar</p>
+            </a>
+        </aside>
+
+        <main class="content main-content">
+            <form>
+                <h1>Copiar texto</h1>
+                <a href="https://programandosolucoes.dev.br/2021/06/08/copiar-texto-javascript/">Referência</a><br><br>
+
+                <div style="display: flex;">
+                    <button onclick="copiarTexto()">COPIAR</button>
+                    <input type="text" id="texto" readonly value="https://programandosolucoes.dev.br/">
+                </div>
+            </form>
+        </main>
+
+        <footer class="footer">
+            All rights reserved @2022
+        </footer>
+    </div>
+    <script src="./js/event.js"></script>
+
+    <script>
+        function copiarTexto() {
+            let textoCopiado = document.getElementById("texto") // obtem o elemento
+            textoCopiado.select() // selecione o texto
+            // textoCopiado.setSelectionRange(0, 99999)
+            document.execCommand("copy")
+            alert("O texto é: " + textoCopiado.value)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./video.css">
+
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+
+        </header>
+
+        <aside class="sidebar">
+            <a href="../../event.html">
+                <p>Voltar</p>
+            </a>
+        </aside>
+
+        <main class="content main-content">
+            <div style="width: 50%">
+                <p class="sintaxe">Sintaxe: Event</p>
+                <div class="container-toggle" style="display: flex; flex-direction: column;">
+                    <div class="container01">
+                        <div class="box1">
+                            <p>In HTML:</p>
+                            <div class="box2">
+                                <span></span>
+                                <span>element</span>
+                                <span>onabort</span>
+                                <span>="myScript"</span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container02">
+                        <div class="box1">
+                            <p>In JavaScript:</p>
+                            <div class="box2">
+                                <span>object.onabort =</span>
+                                <span style="color: mediumblue;"> function</span>
+                                <span style="color: rgb(0, 0, 0);">() {myScript};</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container03">
+                        <div class="box1">
+                            <p>In JavaScript:</p>
+                            <div class="box2">
+                                <span>object.addEventListener(</span>
+                                <span style="color: #FF0000">"abort"</span>
+                                <span style="color: rgb(0, 0, 0);">, myScript);</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <video ref="videoPlayer" width="400px" height="400px" controls>
+                    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4" />
+                </video>
+
+                <p style="margin-top: 30px; font-size: 20px;">Chame uma função quando o carregamento de um vídeo for abortado:</p>
+                <a href="https://www.w3schools.com/jsref/event_onabort_media.asp">Referência</a>
+            <div>
+        </main>
+
+        <footer class="footer">
+            All rights reserved @2022
+        </footer>
+    </div>
+    <script src="./abort.js"></script>
+    <script src="./hover.js"></script>
+    <script>
+        const span01 = document.querySelector("span:nth-child(1)")
+        span01.textContent = "<"
+        const span05 = document.querySelector("span:nth-child(5)")
+        span05.textContent = ">"
+    </script>
+</body>
+
+</html>
